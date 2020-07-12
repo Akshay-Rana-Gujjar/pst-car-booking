@@ -88,6 +88,30 @@
             height: 50px;
             width: 50px;
         }
+
+        .transition {
+            transition: all 0.5s;
+        }
+
+        .hidden-why {
+            width: 0px;
+            height: 0px;
+            color: #e6f8f9;
+            display: none;
+        }
+
+        .why-container:hover {
+            background: white;
+        }
+
+        .why-container:hover .hidden-why {
+
+            width: auto;
+            height: auto;
+            color: black;
+            display: block;
+
+        }
     </style>
 </head>
 
@@ -112,16 +136,22 @@
                             <a class="nav-link" href="#">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#book-car">Book Car</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#book-drivers">Book Driver</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#">About us</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " href="#">
+                            <a class="nav-link " href="#how-it-works">
                                 How it works
                             </a>
 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">FAQs</a>
+                            <a class="nav-link disabled" href="#faq">FAQs</a>
                         </li>
                     </ul>
                     <div class="form-inline my-2 my-lg-0 d-md-block d-none">
@@ -181,7 +211,7 @@
     </section>
 
     <!-- Tour  style="background-image: url('img/bg-4.png');" -->
-    <section class="p-5 bg-white">
+    <section class="p-5 bg-white" id="book-car">
 
         <div class="container p-4">
             <h2 class="font-weight-bold text-center text-dark">Book Your Car</h2>
@@ -231,7 +261,7 @@
         </div>
     </section>
 
-    <section class=" bg-white1">
+    <section class=" bg-white1" id="book-drivers">
 
         <div class="container p-4">
 
@@ -290,7 +320,7 @@
     </section>
 
     <!-- How it works -->
-    <section class="p-4 p-sm-5 " style="background-image: url('img/bg-3.png');">
+    <section class="p-4 p-sm-5 " style="background-image: url('img/bg-3.png');" id="how-it-works">
 
         <div class="container">
             <h2 class="font-weight-bold text-center text-white">How it works</h2>
@@ -324,7 +354,7 @@
                 <div class="col-md-3">
                     <div class=" card p-5 shadow-lg text-center mt-3">
 
-                        <i class="far fa-credit-card my-3 how-it-works-icon"></i>
+                        <i class="fas fa-car-side my-3 how-it-works-icon"></i>
                         <p class="h5">Drive</p>
                         <small>
                             Enjoy your PST Car Service
@@ -413,45 +443,60 @@
         <div class="py-5" style="background-image: url('img/bg-5.png');"></div>
         <div class="" style="background-color: #e6f8f9;">
 
-            
+
 
             <div class="container">
 
                 <h2>Why PST Car Booking?</h2>
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="mb-3 p-5 shadow">
-                            100% Delivery & Pickup <i class="fa fa-chevron-circle-down"></i>
+                        <div class="mb-3 p-5 shadow transition why-container rounded">
+                            <div class="h5"> 100% Delivery & Pickup <i class="fa fa-chevron-circle-down"></i></div>
+
+                            <div class="hidden-why transition small">For every booking, every car model. With industry
+                                leading on-time performance. We love to make things easy for you!</div>
                         </div>
 
                     </div>
                     <div class="col-sm-4">
-                        <div class="mb-3 p-5 shadow">
-                            No Limits <i class="fa fa-chevron-circle-down"></i>
+                        <div class="mb-3 p-5 shadow transition why-container rounded">
+                            <div class="h5"> No Limits <i class="fa fa-chevron-circle-down"></i></div>
+                            <div class="hidden-why transition small">Drive as much as you want with unlimited kms. Just
+                                like your own car!</div>
                         </div>
 
                     </div>
                     <div class="col-sm-4">
-                        <div class="mb-3 p-5 shadow">
-                            New Fleet <i class="fa fa-chevron-circle-down"></i>
+                        <div class="mb-3 p-5 shadow transition why-container rounded">
+                            <div class="h5">New Fleet <i class="fa fa-chevron-circle-down"></i></div>
+                            <div class="hidden-why transition small">Our fleet addition process ensures that majority of
+                                our cars are only a few months old at any time. Say goodbye to bad cars!</div>
                         </div>
 
                     </div>
                     <div class="col-sm-4">
-                        <div class="mb-3 p-5 shadow">
-                            0 Hidden Charges <i class="fa fa-chevron-circle-down"></i>
+                        <div class="mb-3 p-5 shadow transition why-container rounded">
+                            <div class="h5">0 Hidden Charges <i class="fa fa-chevron-circle-down"></i></div>
+                            <div class="hidden-why transition small">Our tariffs include taxes & insurance. And since
+                                our tariffs do NOT include fuel, it means you pay for only as much fuel as you use!
+                            </div>
                         </div>
 
                     </div>
                     <div class="col-sm-4">
-                        <div class="mb-3 p-5 shadow">
-                            Limited Liability <i class="fa fa-chevron-circle-down"></i>
+                        <div class="mb-3 p-5 shadow transition why-container rounded">
+                            <div class="h5">Limited Liability <i class="fa fa-chevron-circle-down"></i></div>
+                            <div class="hidden-why transition small">Enjoy complete peace of mind with your liability
+                                limited to Rs. 10000. In case of any unfortunate incident, our insurance cover will take
+                                care of the rest!</div>
                         </div>
 
                     </div>
                     <div class="col-sm-4">
-                        <div class="mb-3 p-5 shadow">
-                            Booking in 2 Minutes <i class="fa fa-chevron-circle-down"></i>
+                        <div class="mb-3 p-5 shadow transition why-container rounded">
+                            <div class="h5">Booking in 2 Minutes <i class="fa fa-chevron-circle-down"></i></div>
+                            <div class="hidden-why transition small">No hassle of uploading your driving license and
+                                waiting for its approval. Easy enough!</div>
                         </div>
 
                     </div>
@@ -460,6 +505,63 @@
 
         </div>
         <div class="py-5" style="background-image: url('img/bg-5.png');transform: rotate(180deg);"></div>
+
+    </section>
+
+    <section class="p-5 text-center bg-white">
+        <div>
+            Have any query or any question? Call us. <a href="tel:+918130756533"
+                class="btn btn-main shadow-lg ml-3">Call Now</a>
+        </div>
+    </section>
+
+    <section>
+
+        <div class="container p-5">
+            <div class="row">
+                <div class="col-sm-3 text-center">
+                    <div>
+                        <i class="fas fa-smile-beam text-main h11 display-4"></i>
+                    </div>
+                    <div class="h5 font-weight-bold mt-3 mb-0">
+                        1000+
+                    </div>
+                    <div class=" text-muted small">Happy Customers</div>
+
+
+                </div>
+                <div class="col-sm-3 text-center">
+                    <div>
+                        <i class="fas fa-map-marker-alt text-main h11 display-4"></i>
+                    </div>
+                    <div class="h5 font-weight-bold mt-3 mb-0">
+                        22+ Cities
+                    </div>
+                    <div class=" text-muted small">Across India</div>
+
+                </div>
+                <div class="col-sm-3 text-center">
+                    <div>
+                        <i class="fas fa-tachometer-alt text-main h11 display-4"></i>
+                    </div>
+                    <div class="h5 font-weight-bold mt-3 mb-0">
+                        550,000+ 
+                    </div>
+                    <div class=" text-muted small">KMs Covered</div>
+
+                </div>
+                <div class="col-sm-3 text-center">
+                    <div>
+                        <i class="fas fa-star text-main h11 display-4"></i>
+                    </div>
+                    <div class="h5 font-weight-bold mt-3 mb-0">
+                        4.8/5
+                    </div>
+                    <div class=" text-muted small">800+ Reviews</div>
+                </div>
+
+            </div>
+        </div>
 
     </section>
 
